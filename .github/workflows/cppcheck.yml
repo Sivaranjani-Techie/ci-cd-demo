@@ -18,4 +18,4 @@ jobs:
         sudo apt update
         sudo apt install -y cppcheck
     - name: cppcheck
-      run: make cppcheck
+      run: make cppcheck   

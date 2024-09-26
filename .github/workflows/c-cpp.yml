@@ -1,26 +1,19 @@
-name: C Build and Test
+name: C/C++ Build
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
   pull_request:
-    branches:
-      - master
+    branches: [ "master" ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up GCC
-      run: sudo apt-get install build-essential
-
-    - name: Compile the project
+    - uses: actions/checkout@v4
+    - name: make all
       run: make all
-
-    - name: Run the binary
-      run: ./all.out
+    #- name: Add Badges
+    #  uses: wow-actions/add-badges@v1.1.0

@@ -16,7 +16,7 @@ int main() {
     printf("c=%d, d=%d\n", c, d);
     
     // Uncommenting this line will trigger the uninitialized variable error
-    // printf("e=%d\n", e);
+     printf("e=%d\n", e);
     
     return 0;
 }

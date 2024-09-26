@@ -15,7 +15,7 @@ int main() {
     
     // Using uninitialized memory (valgrind will catch this)
     int uninitialized_var;
-    printf("uninitialized_var=%d\n", uninitialized_var);  // Error: Variable used uninitialized
+    //printf("uninitialized_var=%d\n", uninitialized_var);  // Error: Variable used uninitialized
     
     printf("c=%d, d=%d\n", c, d);
     

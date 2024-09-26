@@ -1,0 +1,21 @@
+name: C/C++ Heap Analysis
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name : apt packages
+      run: |
+        sudo apt update
+        sudo apt install -y valgrind
+    - name: memcheck
+      run: make memcheck
